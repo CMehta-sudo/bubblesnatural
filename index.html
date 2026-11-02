@@ -1,0 +1,2525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUBBLES NATURAL | Luxury Handcrafted Botanicals &amp; Boutique Storefront</title>
+  <meta name="description" content="Small-batch luxury organic boutique offering handcrafted cold-process soaps, botanical lip balms, fine perfumes, and curated hampers in Bengaluru.">
+  <meta name="theme-color" content="#1E352F">
+  <link rel="icon" type="image/png" href="images/Logo.png">
+
+  <!-- Google Fonts: Playfair Display (Serif) & Montserrat (Sans-Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       RESET & ROOT VARIABLES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-cream: #FDFBF7;
+      --bg-surface: #FFFFFF;
+      --bg-elevated: #F9F5EE;
+      --text-deep: #222222;
+      --text-muted: #645F59;
+      --text-light: #8E877E;
+      --forest-green: #1E352F;
+      --forest-green-hover: #142420;
+      --forest-green-soft: #28443C;
+      --gold-accent: #A8854D;
+      --gold-light: #E8DCC9;
+      --border-soft: #EFE8DC;
+      --border-card: #EAE3D6;
+      --shadow-subtle: 0 4px 20px rgba(30, 53, 47, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+      --shadow-hover: 0 14px 34px rgba(30, 53, 47, 0.10), 0 2px 6px rgba(0, 0, 0, 0.04);
+      --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-cream);
+      color: var(--text-deep);
+    }
+
+    body {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-deep);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ==========================================================================
+       LUXURY ANNOUNCEMENT TOP BAR
+       ========================================================================== */
+    .top-announcement-bar {
+      background-color: var(--forest-green);
+      color: #E8DCC9;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 10px 16px;
+      text-align: center;
+      border-bottom: 1px solid rgba(232, 220, 201, 0.15);
+    }
+
+    .top-announcement-bar span {
+      display: inline-block;
+      margin: 0 6px;
+    }
+
+    /* ==========================================================================
+       GLOBAL CONTAINER
+       ========================================================================== */
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    /* ==========================================================================
+       HEADER & BRAND IDENTITY
+       ========================================================================== */
+    .site-header {
+      padding: 48px 20px 36px;
+      text-align: center;
+      position: relative;
+    }
+
+    .site-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+    }
+
+    .brand-logo-container {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .brand-logo-img {
+      max-width: 125px;
+      max-height: 125px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(30, 53, 47, 0.06);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .brand-logo-img:hover {
+      transform: scale(1.04);
+    }
+
+    .brand-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.3rem, 4.8vw, 3.6rem);
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--forest-green);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .brand-tagline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
+      color: var(--text-muted);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      max-width: 680px;
+      margin: 0 auto 22px;
+    }
+
+    .trust-badges-bar {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px 18px;
+      padding: 10px 24px;
+      background-color: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-soft);
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--forest-green);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+    }
+
+    .badge-sep {
+      color: var(--gold-accent);
+      opacity: 0.6;
+    }
+
+    /* ==========================================================================
+       CATEGORY CHIPS / INTERACTIVE FILTER CAPSULES
+       ========================================================================== */
+    .catalog-intro-strip {
+      margin: 36px auto 40px;
+      text-align: center;
+    }
+
+    .section-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold-accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-weight: 600;
+      color: var(--forest-green);
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto 24px;
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .cat-pill {
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      padding: 10px 22px;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-soft);
+      border-radius: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--text-deep);
+      transition: var(--transition-smooth);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+      user-select: none;
+    }
+
+    .cat-pill:hover {
+      border-color: var(--forest-green);
+      color: var(--forest-green);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(30, 53, 47, 0.08);
+    }
+
+    .cat-pill.active {
+      background-color: var(--forest-green);
+      color: #FFFFFF;
+      border-color: var(--forest-green);
+      box-shadow: 0 4px 14px rgba(30, 53, 47, 0.25);
+    }
+
+    /* ==========================================================================
+       STRICT RESPONSIVE GRID BREAKPOINTS
+       - Desktop (> 992px): 3 columns, spacious margins, ample whitespace
+       - Tablet (768px - 992px): 2 columns
+       - Mobile (< 768px): 1 column vertical scroll, full-width touch targets
+       ========================================================================== */
+    .products-grid {
+      display: grid;
+      margin-bottom: 80px;
+      transition: opacity 0.25s ease;
+    }
+
+    /* Desktop Breakpoint (>992px) */
+    @media (min-width: 993px) {
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 36px;
+      }
+    }
+
+    /* Tablet Breakpoint (768px - 992px) */
+    @media (min-width: 768px) and (max-width: 992px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px;
+      }
+    }
+
+    /* Mobile Phone Breakpoint (<768px) */
+    @media (max-width: 767px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .site-header {
+        padding: 36px 16px 28px;
+      }
+      .brand-title {
+        letter-spacing: 0.16em;
+      }
+      .trust-badges-bar {
+        font-size: 0.72rem;
+        gap: 8px 12px;
+        padding: 8px 16px;
+      }
+      .cat-pill {
+        padding: 8px 16px;
+        font-size: 0.78rem;
+      }
+    }
+
+    /* ==========================================================================
+       PRODUCT CARD AESTHETICS & MULTI-PHOTO SLIDER
+       ========================================================================== */
+    .lux-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .lux-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(168, 133, 77, 0.45);
+    }
+
+    .card-media-wrapper {
+      position: relative;
+      width: 100%;
+      height: 310px;
+      background: linear-gradient(180deg, #F9F7F3 0%, #F3EEE4 100%);
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .lux-card:hover .card-img {
+      transform: scale(1.04);
+    }
+
+    .luxury-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 5;
+      background-color: rgba(253, 251, 247, 0.94);
+      color: var(--forest-green);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(234, 227, 214, 0.9);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      pointer-events: none;
+    }
+
+    .gallery-counter {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 5;
+      background-color: rgba(30, 53, 47, 0.85);
+      color: #FFFFFF;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: 14px;
+      backdrop-filter: blur(4px);
+      pointer-events: none;
+    }
+
+    .gallery-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .gallery-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .gallery-slide {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      scroll-snap-align: start;
+      position: relative;
+    }
+
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 6;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.88);
+      color: var(--forest-green);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: var(--transition-smooth);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .lux-card:hover .slider-btn {
+      opacity: 1;
+    }
+
+    .prev-btn {
+      left: 10px;
+    }
+
+    .next-btn {
+      right: 10px;
+    }
+
+    .slider-btn:hover {
+      background-color: var(--forest-green);
+      color: #FFFFFF;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .slider-dots-bar {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+      display: flex;
+      gap: 6px;
+      padding: 4px 8px;
+      background-color: rgba(0, 0, 0, 0.25);
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+    }
+
+    .slider-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .slider-dot.active {
+      background-color: #FFFFFF;
+      transform: scale(1.3);
+      width: 14px;
+      border-radius: 4px;
+    }
+
+    .card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(239, 232, 220, 0.7);
+    }
+
+    .product-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--forest-green);
+      letter-spacing: 0.02em;
+      line-height: 1.25;
+    }
+
+    .product-price {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--gold-accent);
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+    }
+
+    .ingredients-box {
+      margin-bottom: 20px;
+      flex-grow: 1;
+      background-color: #FAF8F4;
+      border-radius: 8px;
+      padding: 12px 14px;
+      border: 1px solid rgba(239, 232, 220, 0.6);
+    }
+
+    .ingredients-label {
+      display: block;
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 600;
+      color: var(--gold-accent);
+      margin-bottom: 5px;
+    }
+
+    .ingredients-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       QUANTITY CONTROLLER & ADD TO BAG BUTTON
+       ========================================================================== */
+    .card-cart-controls {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .qty-control-block {
+      display: inline-flex;
+      align-items: center;
+      background-color: #F8F5EE;
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      overflow: hidden;
+      height: 48px;
+      flex-shrink: 0;
+    }
+
+    .qty-btn {
+      background: none;
+      border: none;
+      width: 36px;
+      height: 100%;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--forest-green);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      user-select: none;
+    }
+
+    .qty-btn:hover {
+      background-color: rgba(30, 53, 47, 0.1);
+    }
+
+    .qty-btn:active {
+      background-color: rgba(30, 53, 47, 0.18);
+    }
+
+    .qty-display {
+      min-width: 30px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-deep);
+      user-select: none;
+    }
+
+    .btn-add-to-bag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-grow: 1;
+      height: 48px;
+      background-color: var(--forest-green);
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0 16px;
+      border-radius: 8px;
+      transition: var(--transition-smooth);
+      border: 1px solid var(--forest-green);
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(30, 53, 47, 0.12);
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .btn-add-to-bag:hover {
+      background-color: var(--forest-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(30, 53, 47, 0.22);
+    }
+
+    .btn-add-to-bag.added-flash {
+      background-color: #2F594C !important;
+      border-color: #2F594C !important;
+    }
+
+    .cart-btn-icon {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 480px) {
+      .card-cart-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+      .qty-control-block {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .qty-btn {
+        width: 48px;
+      }
+      .btn-add-to-bag {
+        width: 100%;
+        height: 50px;
+      }
+    }
+
+    /* ==========================================================================
+       EMPTY CATEGORY STATE
+       ========================================================================== */
+    .empty-category-container {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 64px 24px;
+      background-color: var(--bg-surface);
+      border: 1px dashed var(--gold-accent);
+      border-radius: 16px;
+      margin: 10px 0 40px;
+    }
+
+    .empty-icon {
+      font-size: 2.2rem;
+      color: var(--gold-accent);
+      margin-bottom: 14px;
+    }
+
+    .empty-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--forest-green);
+      margin-bottom: 10px;
+    }
+
+    .empty-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 520px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       BESPOKE GIFTING & CELEBRATION SECTION
+       ========================================================================== */
+    .bespoke-gifting-banner {
+      background: linear-gradient(135deg, #1E352F 0%, #2A4840 100%);
+      color: #FFFFFF;
+      border-radius: 18px;
+      padding: 48px 36px;
+      margin-bottom: 80px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(30, 53, 47, 0.12);
+    }
+
+    .bespoke-gifting-banner::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(168, 133, 77, 0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .gifting-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .gifting-content {
+      max-width: 620px;
+    }
+
+    .gifting-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--gold-light);
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .gifting-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 600;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+    }
+
+    .gifting-desc {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--gold-accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 26px;
+      border-radius: 8px;
+      transition: var(--transition-smooth);
+      border: 1px solid var(--gold-accent);
+      white-space: nowrap;
+    }
+
+    .btn-gold:hover {
+      background-color: #93713D;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(168, 133, 77, 0.3);
+    }
+
+    /* ==========================================================================
+       BUSINESS TRANSPARENCY LAYER ("HOW TO ORDER" 3-STEP RIBBON)
+       ========================================================================== */
+    .how-to-order-section {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 48px 36px;
+      margin-bottom: 80px;
+      box-shadow: var(--shadow-subtle);
+      text-align: center;
+    }
+
+    .order-ribbon-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 36px;
+      position: relative;
+    }
+
+    @media (max-width: 820px) {
+      .order-ribbon-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    .ribbon-step-card {
+      background-color: var(--bg-cream);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 30px 22px;
+      text-align: center;
+      position: relative;
+      transition: var(--transition-smooth);
+    }
+
+    .ribbon-step-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold-accent);
+    }
+
+    .step-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--forest-green);
+      color: #FFFFFF;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      box-shadow: 0 4px 10px rgba(30, 53, 47, 0.2);
+    }
+
+    .step-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: var(--forest-green);
+      margin-bottom: 8px;
+    }
+
+    .step-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       COMPLETE CONTACT GRID FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: #162823;
+      color: #FAF7F2;
+      padding: 64px 20px 32px;
+      border-top: 1px solid rgba(232, 220, 201, 0.1);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1.2fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 880px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    .footer-brand-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .footer-tagline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      color: var(--gold-light);
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .footer-bio {
+      font-size: 0.88rem;
+      color: #C5BFB5;
+      line-height: 1.65;
+      max-width: 380px;
+    }
+
+    .footer-heading {
+      font-size: 0.76rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--gold-accent);
+      margin-bottom: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--gold-light);
+      margin-top: 2px;
+    }
+
+    .contact-link {
+      color: #FFFFFF;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .contact-link:hover {
+      color: var(--gold-light);
+      text-decoration: underline;
+    }
+
+    .contact-sub {
+      display: block;
+      font-size: 0.75rem;
+      color: #9D968B;
+      margin-top: 2px;
+    }
+
+    .location-box {
+      font-size: 0.88rem;
+      color: #C5BFB5;
+      line-height: 1.6;
+    }
+
+    .location-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      color: #E8DCC9;
+      margin-top: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer-bottom-bar {
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: #9D968B;
+    }
+
+    .copyright-line {
+      letter-spacing: 0.02em;
+    }
+
+    .footer-guarantee {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ==========================================================================
+       PERSISTENT FLOATING SHOPPING BAG BUTTON
+       ========================================================================== */
+    .floating-bag-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      background-color: var(--forest-green);
+      color: #FFFFFF;
+      border: 1px solid rgba(232, 220, 201, 0.35);
+      border-radius: 36px;
+      padding: 12px 22px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 28px rgba(30, 53, 47, 0.35);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .floating-bag-btn:hover {
+      background-color: var(--forest-green-hover);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 14px 32px rgba(30, 53, 47, 0.45);
+    }
+
+    .floating-bag-icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    .bag-badge {
+      background-color: var(--gold-accent);
+      color: #FFFFFF;
+      min-width: 24px;
+      height: 24px;
+      border-radius: 12px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 6px;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .bag-badge.pop {
+      transform: scale(1.3);
+    }
+
+    @media (max-width: 600px) {
+      .floating-bag-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 16px;
+        gap: 8px;
+      }
+      .floating-bag-btn .bag-label {
+        display: none;
+      }
+    }
+
+    /* ==========================================================================
+       CART OVERLAY DRAWER / SLIDE-OUT MODAL
+       ========================================================================== */
+    .cart-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(18, 30, 27, 0.55);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .cart-backdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 460px;
+      height: 100vh;
+      background-color: #FFFFFF;
+      z-index: 1001;
+      box-shadow: -8px 0 32px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .cart-drawer.open {
+      transform: translateX(0);
+    }
+
+    .cart-drawer-header {
+      padding: 24px;
+      border-bottom: 1px solid var(--border-soft);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--bg-cream);
+    }
+
+    .cart-drawer-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--forest-green);
+    }
+
+    .cart-close-btn {
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      line-height: 1;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px 8px;
+      transition: color 0.2s ease;
+    }
+
+    .cart-close-btn:hover {
+      color: var(--forest-green);
+    }
+
+    .cart-items-container {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .cart-item-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #F0ECE4;
+    }
+
+    .cart-item-thumb {
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+      object-fit: cover;
+      background-color: #F7F4EE;
+      flex-shrink: 0;
+      border: 1px solid var(--border-soft);
+    }
+
+    .cart-item-info {
+      flex-grow: 1;
+      min-width: 0;
+    }
+
+    .cart-item-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--forest-green);
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .cart-item-unit-price {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .cart-item-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cart-qty-btn {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      background-color: #F0EDE5;
+      border: 1px solid var(--border-soft);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--forest-green);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+
+    .cart-qty-btn:hover {
+      background-color: var(--gold-light);
+    }
+
+    .cart-qty-num {
+      font-size: 0.88rem;
+      font-weight: 600;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .cart-item-subtotal {
+      text-align: right;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--gold-accent);
+      white-space: nowrap;
+      margin-left: 8px;
+    }
+
+    .cart-item-remove-btn {
+      background: none;
+      border: none;
+      color: #A39B90;
+      font-size: 1.15rem;
+      cursor: pointer;
+      padding: 4px;
+      transition: color 0.2s ease;
+      line-height: 1;
+    }
+
+    .cart-item-remove-btn:hover {
+      color: #B93838;
+    }
+
+    .empty-cart-notice {
+      text-align: center;
+      padding: 60px 16px;
+      color: var(--text-muted);
+    }
+
+    .empty-cart-icon {
+      font-size: 2.5rem;
+      color: var(--gold-accent);
+      margin-bottom: 12px;
+    }
+
+    .empty-cart-notice h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem;
+      color: var(--forest-green);
+      margin-bottom: 8px;
+    }
+
+    .cart-drawer-footer {
+      padding: 24px;
+      background-color: var(--bg-cream);
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .cart-total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 14px;
+    }
+
+    .cart-total-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      color: var(--text-deep);
+    }
+
+    .cart-total-amount {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--forest-green);
+    }
+
+    .cart-shipping-note {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .btn-confirm-whatsapp {
+      width: 100%;
+      height: 52px;
+      background-color: var(--forest-green);
+      color: #FFFFFF;
+      border: 1px solid var(--forest-green);
+      border-radius: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(30, 53, 47, 0.2);
+      transition: var(--transition-smooth);
+    }
+
+    .btn-confirm-whatsapp:hover {
+      background-color: var(--forest-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(30, 53, 47, 0.3);
+    }
+
+    .btn-confirm-whatsapp:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .wa-invoice-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement-bar">
+    <span>✦ Pure Botanicals</span>
+    <span>•</span>
+    <span>100% Handcrafted Luxury</span>
+    <span>•</span>
+    <span>Small-Batch Atelier</span>
+    <span>•</span>
+    <span>Pan-India Shipping ✦</span>
+  </div>
+
+  <!-- Header Section -->
+  <header class="site-header">
+    <div class="container">
+      <div class="brand-logo-container">
+        <img src="images/Logo.png" alt="Bubbles Natural Logo" class="brand-logo-img" />
+      </div>
+      <h1 class="brand-title">Bubbles Natural</h1>
+      <p class="brand-tagline">Handcrafted Organic Soaps, Botanical Lip Care, Fine Perfumes &amp; Bespoke Gifting</p>
+      
+      <!-- User Specified Subtle Trust Ribbon -->
+      <div class="trust-badges-bar">
+        <span>✦ 100% Handcrafted</span>
+        <span class="badge-sep">|</span>
+        <span>✦ Small-Batch Local Production</span>
+        <span class="badge-sep">|</span>
+        <span>✦ Bengaluru, IN</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="container">
+
+    <!-- Catalog Intro & Category Filters -->
+    <section class="catalog-intro-strip">
+      <span class="section-eyebrow">Mindful Formulations</span>
+      <h2 class="section-headline">The Curated Botanical Collection</h2>
+      <p class="section-desc">
+        Formulated with cold-pressed botanical oils, raw plant butters, and therapeutic aromatics.
+        Select your handcrafted favorites below and curate your order directly in your bag.
+      </p>
+
+      <!-- Category Filter Capsules -->
+      <nav class="category-pills" aria-label="Product Categories">
+        <button type="button" class="cat-pill active" data-filter="all">✦ All Creations</button>
+        <button type="button" class="cat-pill" data-filter="soaps">Cold-Process Soaps</button>
+        <button type="button" class="cat-pill" data-filter="lip-care">Botanical Lip Balms</button>
+        <button type="button" class="cat-pill" data-filter="lotions">Magnesium Lotions</button>
+        <button type="button" class="cat-pill" data-filter="perfumes">Perfumes &amp; Aromas</button>
+        <button type="button" class="cat-pill" data-filter="gifting">Curated Gift Hampers</button>
+      </nav>
+    </section>
+
+    <!-- Strict Responsive Grid Breakpoints (Desktop: 3-Col, Tablet: 2-Col, Mobile: 1-Col) -->
+    <section class="products-grid" id="productGrid" aria-label="Product Showcase">
+      
+        <!-- Product Card: Chocolate Soap -->
+        <article class="lux-card" data-category="soaps" id="card-0">
+          
+            <div class="card-media-wrapper">
+              <span class="luxury-badge">Cold-Process Soap</span>
+              <img src="images/bubblesnaturals_chocolate_soap.jpg" alt="Chocolate Soap" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+Q2hvY29sYXRlIFNvYXA8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzNjUiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiNBODg1NEQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIzLjUiPkJVQkJMRVMgTkFUVVJBTDwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjM5MCIgZm9udC1mYW1pbHk9IidNb250c2VycmF0Jywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzdBNzQ2QiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+QVJUSVNBTkFMIEJPVEFOSUNBTDwvdGV4dD4KPC9zdmc+'" />
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Chocolate Soap</h3>
+              <div class="product-price">₹120</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Raw cocoa butter, dark chocolate essence, nourishing coconut oil, and plant glycerin.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Chocolate Soap">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(0, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-0">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(0, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-0" onclick="addProductToBag(0)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Body Lotion -->
+        <article class="lux-card" data-category="lotions" id="card-1">
+          
+            <div class="card-media-wrapper">
+              <span class="luxury-badge">Nourishing Body Care</span>
+              <img src="images/bübblesnatural_Magnesium_Lotion.png" alt="Body Lotion" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+Qm9keSBMb3Rpb248L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzNjUiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiNBODg1NEQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIzLjUiPkJVQkJMRVMgTkFUVVJBTDwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjM5MCIgZm9udC1mYW1pbHk9IidNb250c2VycmF0Jywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzdBNzQ2QiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+QVJUSVNBTkFMIEJPVEFOSUNBTDwvdGV4dD4KPC9zdmc+'" />
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Body Lotion</h3>
+              <div class="product-price">₹220</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Magnesium lotion with shea butter and botanical oils for calm skin and deeper relaxation.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Body Lotion">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(1, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-1">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(1, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-1" onclick="addProductToBag(1)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Macaron Botanical Lip Balm -->
+        <article class="lux-card" data-category="lip-care" id="card-2">
+          
+            <div class="card-media-wrapper gallery-wrapper" id="gallery-2">
+              <span class="luxury-badge">Botanical Lip Care</span>
+              <span class="gallery-counter"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -1px; margin-right: 3px;"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>3 Photos</span>
+              <button type="button" class="slider-btn prev-btn" onclick="slideGallery('gallery-2', -1)" aria-label="Previous photo">&#10094;</button>
+              <div class="gallery-track" onscroll="updateSliderDots('gallery-2')">
+                <div class="gallery-slide" data-slide-index="0"><img src="images/bubblesnatural_lipbalm.png" alt="Macaron Botanical Lip Balm photo 1" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+TWFjYXJvbiBCb3RhbmljYWwgTGlwIEJhbG08L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzNjUiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiNBODg1NEQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIzLjUiPkJVQkJMRVMgTkFUVVJBTDwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjM5MCIgZm9udC1mYW1pbHk9IidNb250c2VycmF0Jywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzdBNzQ2QiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+QVJUSVNBTkFMIEJPVEFOSUNBTDwvdGV4dD4KPC9zdmc+'" /></div><div class="gallery-slide" data-slide-index="1"><img src="images/f06a1533-b6fd-4a8a-92ed-48a1c15b2fb9.JPG" alt="Macaron Botanical Lip Balm photo 2" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+TWFjYXJvbiBCb3RhbmljYWwgTGlwIEJhbG08L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzNjUiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiNBODg1NEQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIzLjUiPkJVQkJMRVMgTkFUVVJBTDwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjM5MCIgZm9udC1mYW1pbHk9IidNb250c2VycmF0Jywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzdBNzQ2QiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+QVJUSVNBTkFMIEJPVEFOSUNBTDwvdGV4dD4KPC9zdmc+'" /></div><div class="gallery-slide" data-slide-index="2"><img src="images/ed935565-cb1a-4f2f-b322-7c87bb8ca29e.JPG" alt="Macaron Botanical Lip Balm photo 3" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+TWFjYXJvbiBCb3RhbmljYWwgTGlwIEJhbG08L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzNjUiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiNBODg1NEQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIzLjUiPkJVQkJMRVMgTkFUVVJBTDwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjM5MCIgZm9udC1mYW1pbHk9IidNb250c2VycmF0Jywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzdBNzQ2QiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+QVJUSVNBTkFMIEJPVEFOSUNBTDwvdGV4dD4KPC9zdmc+'" /></div>
+              </div>
+              <button type="button" class="slider-btn next-btn" onclick="slideGallery('gallery-2', 1)" aria-label="Next photo">&#10095;</button>
+              <div class="slider-dots-bar">
+                <span class="slider-dot active" onclick="goToSlide('gallery-2', 0)"></span><span class="slider-dot" onclick="goToSlide('gallery-2', 1)"></span><span class="slider-dot" onclick="goToSlide('gallery-2', 2)"></span>
+              </div>
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Macaron Botanical Lip Balm</h3>
+              <div class="product-price">₹150</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Cold-pressed sweet almond oil, beeswax, organic butter, and natural Strawberry & Orange infusions.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Macaron Botanical Lip Balm">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(2, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-2">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(2, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-2" onclick="addProductToBag(2)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Floral Perfume - EDP -->
+        <article class="lux-card" data-category="perfumes" id="card-3">
+          
+            <div class="card-media-wrapper gallery-wrapper" id="gallery-3">
+              <span class="luxury-badge">Perfume & Aroma</span>
+              <span class="gallery-counter"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -1px; margin-right: 3px;"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>2 Photos</span>
+              <button type="button" class="slider-btn prev-btn" onclick="slideGallery('gallery-3', -1)" aria-label="Previous photo">&#10094;</button>
+              <div class="gallery-track" onscroll="updateSliderDots('gallery-3')">
+                <div class="gallery-slide" data-slide-index="0"><img src="images/bubblesnatural_edp.png" alt="Floral Perfume - EDP photo 1" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+RmxvcmFsIFBlcmZ1bWUgLSBFRFA8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzNjUiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiNBODg1NEQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIzLjUiPkJVQkJMRVMgTkFUVVJBTDwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjM5MCIgZm9udC1mYW1pbHk9IidNb250c2VycmF0Jywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzdBNzQ2QiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+QVJUSVNBTkFMIEJPVEFOSUNBTDwvdGV4dD4KPC9zdmc+'" /></div><div class="gallery-slide" data-slide-index="1"><img src="images/c8f5c3f7-492c-4483-a03a-d40092557d7f.JPG" alt="Floral Perfume - EDP photo 2" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+RmxvcmFsIFBlcmZ1bWUgLSBFRFA8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzNjUiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiNBODg1NEQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIzLjUiPkJVQkJMRVMgTkFUVVJBTDwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjM5MCIgZm9udC1mYW1pbHk9IidNb250c2VycmF0Jywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzdBNzQ2QiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+QVJUSVNBTkFMIEJPVEFOSUNBTDwvdGV4dD4KPC9zdmc+'" /></div>
+              </div>
+              <button type="button" class="slider-btn next-btn" onclick="slideGallery('gallery-3', 1)" aria-label="Next photo">&#10095;</button>
+              <div class="slider-dots-bar">
+                <span class="slider-dot active" onclick="goToSlide('gallery-3', 0)"></span><span class="slider-dot" onclick="goToSlide('gallery-3', 1)"></span>
+              </div>
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Floral Perfume - EDP</h3>
+              <div class="product-price">₹200</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Small-batch artisanal Eau De Parfum (10ml) infused with fresh blooming floral bouquets and subtle sweet cherry undertones.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Floral Perfume - EDP">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(3, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-3">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(3, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-3" onclick="addProductToBag(3)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Botanical Floral Wax Sachet -->
+        <article class="lux-card" data-category="perfumes" id="card-4">
+          
+            <div class="card-media-wrapper gallery-wrapper" id="gallery-4">
+              <span class="luxury-badge">Perfume & Aroma</span>
+              <span class="gallery-counter"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -1px; margin-right: 3px;"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>2 Photos</span>
+              <button type="button" class="slider-btn prev-btn" onclick="slideGallery('gallery-4', -1)" aria-label="Previous photo">&#10094;</button>
+              <div class="gallery-track" onscroll="updateSliderDots('gallery-4')">
+                <div class="gallery-slide" data-slide-index="0"><img src="images/0c6edd97-8f2e-428f-8dec-bdeba628e63a.JPG" alt="Botanical Floral Wax Sachet photo 1" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+Qm90YW5pY2FsIEZsb3JhbCBXYXggU2FjaGV0PC90ZXh0PgogIDx0ZXh0IHg9IjMwMCIgeT0iMzY1IiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjQTg4NTREIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMy41Ij5CVUJCTEVTIE5BVFVSQUw8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzOTAiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI0MDAiIGZpbGw9IiM3QTc0NkIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxLjUiPkFSVElTQU5BTCBCT1RBTklDQUw8L3RleHQ+Cjwvc3ZnPg=='" /></div><div class="gallery-slide" data-slide-index="1"><img src="images/b9fdcf90-5fcb-442a-9cfe-4bfbf0840b91.JPG" alt="Botanical Floral Wax Sachet photo 2" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+Qm90YW5pY2FsIEZsb3JhbCBXYXggU2FjaGV0PC90ZXh0PgogIDx0ZXh0IHg9IjMwMCIgeT0iMzY1IiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjQTg4NTREIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMy41Ij5CVUJCTEVTIE5BVFVSQUw8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzOTAiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI0MDAiIGZpbGw9IiM3QTc0NkIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxLjUiPkFSVElTQU5BTCBCT1RBTklDQUw8L3RleHQ+Cjwvc3ZnPg=='" /></div>
+              </div>
+              <button type="button" class="slider-btn next-btn" onclick="slideGallery('gallery-4', 1)" aria-label="Next photo">&#10095;</button>
+              <div class="slider-dots-bar">
+                <span class="slider-dot active" onclick="goToSlide('gallery-4', 0)"></span><span class="slider-dot" onclick="goToSlide('gallery-4', 1)"></span>
+              </div>
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Botanical Floral Wax Sachet</h3>
+              <div class="product-price">₹180</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Pure soy & beeswax tablet infused with aromatic essential oils, dried calendula & baby's breath, with jute hanging cord for wardrobes.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Botanical Floral Wax Sachet">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(4, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-4">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(4, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-4" onclick="addProductToBag(4)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Pink Donut & Shimmer Heart Soap Duo -->
+        <article class="lux-card" data-category="soaps" id="card-5">
+          
+            <div class="card-media-wrapper gallery-wrapper" id="gallery-5">
+              <span class="luxury-badge">Cold-Process Soap</span>
+              <span class="gallery-counter"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -1px; margin-right: 3px;"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>2 Photos</span>
+              <button type="button" class="slider-btn prev-btn" onclick="slideGallery('gallery-5', -1)" aria-label="Previous photo">&#10094;</button>
+              <div class="gallery-track" onscroll="updateSliderDots('gallery-5')">
+                <div class="gallery-slide" data-slide-index="0"><img src="images/Soap.JPG" alt="Pink Donut & Shimmer Heart Soap Duo photo 1" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+UGluayBEb251dCAmYW1wOyBTaGltbWVyIEhlYXJ0IFNvYXAgRHVvPC90ZXh0PgogIDx0ZXh0IHg9IjMwMCIgeT0iMzY1IiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjQTg4NTREIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMy41Ij5CVUJCTEVTIE5BVFVSQUw8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzOTAiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI0MDAiIGZpbGw9IiM3QTc0NkIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxLjUiPkFSVElTQU5BTCBCT1RBTklDQUw8L3RleHQ+Cjwvc3ZnPg=='" /></div><div class="gallery-slide" data-slide-index="1"><img src="images/55c0522c-6fba-4b9c-b930-67d3f807c18a.JPG" alt="Pink Donut & Shimmer Heart Soap Duo photo 2" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+UGluayBEb251dCAmYW1wOyBTaGltbWVyIEhlYXJ0IFNvYXAgRHVvPC90ZXh0PgogIDx0ZXh0IHg9IjMwMCIgeT0iMzY1IiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjQTg4NTREIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMy41Ij5CVUJCTEVTIE5BVFVSQUw8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzOTAiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI0MDAiIGZpbGw9IiM3QTc0NkIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxLjUiPkFSVElTQU5BTCBCT1RBTklDQUw8L3RleHQ+Cjwvc3ZnPg=='" /></div>
+              </div>
+              <button type="button" class="slider-btn next-btn" onclick="slideGallery('gallery-5', 1)" aria-label="Next photo">&#10095;</button>
+              <div class="slider-dots-bar">
+                <span class="slider-dot active" onclick="goToSlide('gallery-5', 0)"></span><span class="slider-dot" onclick="goToSlide('gallery-5', 1)"></span>
+              </div>
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Pink Donut & Shimmer Heart Soap Duo</h3>
+              <div class="product-price">₹160</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Artisan glazed pastry soap with gentle exfoliating sprinkles paired with a shimmering midnight blue heart bar.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Pink Donut & Shimmer Heart Soap Duo">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(5, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-5">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(5, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-5" onclick="addProductToBag(5)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Watermelon Slice Handcrafted Soap -->
+        <article class="lux-card" data-category="soaps" id="card-6">
+          
+            <div class="card-media-wrapper">
+              <span class="luxury-badge">Cold-Process Soap</span>
+              <img src="images/cbf58346-7b5f-4f63-8796-1102d946eb53.JPG" alt="Watermelon Slice Handcrafted Soap" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+V2F0ZXJtZWxvbiBTbGljZSBIYW5kY3JhZnRlZCBTb2FwPC90ZXh0PgogIDx0ZXh0IHg9IjMwMCIgeT0iMzY1IiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjQTg4NTREIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMy41Ij5CVUJCTEVTIE5BVFVSQUw8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzOTAiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI0MDAiIGZpbGw9IiM3QTc0NkIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxLjUiPkFSVElTQU5BTCBCT1RBTklDQUw8L3RleHQ+Cjwvc3ZnPg=='" />
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Watermelon Slice Handcrafted Soap</h3>
+              <div class="product-price">₹150</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Cold-process artisan soap slice with botanical watermelon scent, poppy seed scrub, and moisturizing aloe vera.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Watermelon Slice Handcrafted Soap">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(6, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-6">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(6, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-6" onclick="addProductToBag(6)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Golden Marigold Floral Sculpted Soap -->
+        <article class="lux-card" data-category="soaps" id="card-7">
+          
+            <div class="card-media-wrapper">
+              <span class="luxury-badge">Cold-Process Soap</span>
+              <img src="images/d1ec642b-1aca-417c-a804-85a396b88c02.JPG" alt="Golden Marigold Floral Sculpted Soap" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+R29sZGVuIE1hcmlnb2xkIEZsb3JhbCBTY3VscHRlZCBTb2FwPC90ZXh0PgogIDx0ZXh0IHg9IjMwMCIgeT0iMzY1IiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjQTg4NTREIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMy41Ij5CVUJCTEVTIE5BVFVSQUw8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzOTAiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI0MDAiIGZpbGw9IiM3QTc0NkIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxLjUiPkFSVElTQU5BTCBCT1RBTklDQUw8L3RleHQ+Cjwvc3ZnPg=='" />
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Golden Marigold Floral Sculpted Soap</h3>
+              <div class="product-price">₹150</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Intricately hand-poured botanical marigold bloom soap enriched with golden calendula extract and honey.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Golden Marigold Floral Sculpted Soap">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(7, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-7">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(7, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-7" onclick="addProductToBag(7)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Citrus Sunshine Layered Soap Bar -->
+        <article class="lux-card" data-category="soaps" id="card-8">
+          
+            <div class="card-media-wrapper">
+              <span class="luxury-badge">Cold-Process Soap</span>
+              <img src="images/20ee6f21-cf42-4da6-a742-0c967f051527.JPG" alt="Citrus Sunshine Layered Soap Bar" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+Q2l0cnVzIFN1bnNoaW5lIExheWVyZWQgU29hcCBCYXI8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzNjUiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiNBODg1NEQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIzLjUiPkJVQkJMRVMgTkFUVVJBTDwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjM5MCIgZm9udC1mYW1pbHk9IidNb250c2VycmF0Jywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzdBNzQ2QiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+QVJUSVNBTkFMIEJPVEFOSUNBTDwvdGV4dD4KPC9zdmc+'" />
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Citrus Sunshine Layered Soap Bar</h3>
+              <div class="product-price">₹140</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Dual-tone cold process bar infused with sweet orange, turmeric root, mango butter, and pure coconut oil.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Citrus Sunshine Layered Soap Bar">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(8, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-8">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(8, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-8" onclick="addProductToBag(8)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Mosaic Terrazzo Soap Bar -->
+        <article class="lux-card" data-category="soaps" id="card-9">
+          
+            <div class="card-media-wrapper">
+              <span class="luxury-badge">Cold-Process Soap</span>
+              <img src="images/babfa4dc-24e3-45e2-9a8d-da225c424db1.JPG" alt="Mosaic Terrazzo Soap Bar" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+TW9zYWljIFRlcnJhenpvIFNvYXAgQmFyPC90ZXh0PgogIDx0ZXh0IHg9IjMwMCIgeT0iMzY1IiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjQTg4NTREIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMy41Ij5CVUJCTEVTIE5BVFVSQUw8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzOTAiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI0MDAiIGZpbGw9IiM3QTc0NkIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxLjUiPkFSVElTQU5BTCBCT1RBTklDQUw8L3RleHQ+Cjwvc3ZnPg=='" />
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Mosaic Terrazzo Soap Bar</h3>
+              <div class="product-price">₹140</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Clear vegetable glycerin block studded with colorful artisan soap cubes for a modern terrazzo finish.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Mosaic Terrazzo Soap Bar">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(9, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-9">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(9, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-9" onclick="addProductToBag(9)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Golden Heart Coffee Scrub Soap -->
+        <article class="lux-card" data-category="soaps" id="card-10">
+          
+            <div class="card-media-wrapper">
+              <span class="luxury-badge">Cold-Process Soap</span>
+              <img src="images/ca6363f5-271c-45e6-8600-50ff1916ba43.JPG" alt="Golden Heart Coffee Scrub Soap" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+R29sZGVuIEhlYXJ0IENvZmZlZSBTY3J1YiBTb2FwPC90ZXh0PgogIDx0ZXh0IHg9IjMwMCIgeT0iMzY1IiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjQTg4NTREIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMy41Ij5CVUJCTEVTIE5BVFVSQUw8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzOTAiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI0MDAiIGZpbGw9IiM3QTc0NkIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxLjUiPkFSVElTQU5BTCBCT1RBTklDQUw8L3RleHQ+Cjwvc3ZnPg=='" />
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Golden Heart Coffee Scrub Soap</h3>
+              <div class="product-price">₹150</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Fine Arabica coffee grounds for gentle circulation and exfoliation, centered with shimmering gold mica heart.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Golden Heart Coffee Scrub Soap">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(10, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-10">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(10, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-10" onclick="addProductToBag(10)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Baby Feet Favor Soaps (Set of 2) -->
+        <article class="lux-card" data-category="soaps" id="card-11">
+          
+            <div class="card-media-wrapper">
+              <span class="luxury-badge">Cold-Process Soap</span>
+              <img src="images/30d5c45a-92bc-498e-90cf-133bb9807d61.JPG" alt="Baby Feet Favor Soaps (Set of 2)" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+QmFieSBGZWV0IEZhdm9yIFNvYXBzIChTZXQgb2YgMik8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzNjUiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiNBODg1NEQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIzLjUiPkJVQkJMRVMgTkFUVVJBTDwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjM5MCIgZm9udC1mYW1pbHk9IidNb250c2VycmF0Jywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzdBNzQ2QiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+QVJUSVNBTkFMIEJPVEFOSUNBTDwvdGV4dD4KPC9zdmc+'" />
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Baby Feet Favor Soaps (Set of 2)</h3>
+              <div class="product-price">₹160</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Mild hypoallergenic glycerin soaps in aqua and royal blue, designed for baby showers, nursery gifts, and favors.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Baby Feet Favor Soaps (Set of 2)">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(11, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-11">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(11, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-11" onclick="addProductToBag(11)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Sparkle Tractor Novelty Soap -->
+        <article class="lux-card" data-category="soaps" id="card-12">
+          
+            <div class="card-media-wrapper">
+              <span class="luxury-badge">Cold-Process Soap</span>
+              <img src="images/bec0a578-5c2c-44fc-a9a1-580699317beb.JPG" alt="Sparkle Tractor Novelty Soap" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+U3BhcmtsZSBUcmFjdG9yIE5vdmVsdHkgU29hcDwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjM2NSIgZm9udC1mYW1pbHk9IidNb250c2VycmF0Jywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iI0E4ODU0RCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMuNSI+QlVCQkxFUyBOQVRVUkFMPC90ZXh0PgogIDx0ZXh0IHg9IjMwMCIgeT0iMzkwIiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iNDAwIiBmaWxsPSIjN0E3NDZCIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMS41Ij5BUlRJU0FOQUwgQk9UQU5JQ0FMPC90ZXh0Pgo8L3N2Zz4='" />
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Sparkle Tractor Novelty Soap</h3>
+              <div class="product-price">₹150</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Playful translucent tractor soap loaded with cosmetic glitter and fruity fragrance, gentle on sensitive skin.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Sparkle Tractor Novelty Soap">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(12, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-12">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(12, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-12" onclick="addProductToBag(12)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Personalized Name Letter Soap Set -->
+        <article class="lux-card" data-category="gifting" id="card-13">
+          
+            <div class="card-media-wrapper">
+              <span class="luxury-badge">Curated Gifting</span>
+              <img src="images/ef81cc45-e79c-47a4-bde4-b61629edf6ce.JPG" alt="Personalized Name Letter Soap Set" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+UGVyc29uYWxpemVkIE5hbWUgTGV0dGVyIFNvYXAgU2V0PC90ZXh0PgogIDx0ZXh0IHg9IjMwMCIgeT0iMzY1IiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjQTg4NTREIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMy41Ij5CVUJCTEVTIE5BVFVSQUw8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzOTAiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI0MDAiIGZpbGw9IiM3QTc0NkIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxLjUiPkFSVElTQU5BTCBCT1RBTklDQUw8L3RleHQ+Cjwvc3ZnPg=='" />
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Personalized Name Letter Soap Set</h3>
+              <div class="product-price">₹350</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Customized alphabet soap bars handcrafted to spell any recipient's name in pastel tones with satin bow packaging.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Personalized Name Letter Soap Set">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(13, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-13">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(13, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-13" onclick="addProductToBag(13)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Celebration Gold Basket Luxury Hamper -->
+        <article class="lux-card" data-category="gifting" id="card-14">
+          
+            <div class="card-media-wrapper">
+              <span class="luxury-badge">Curated Gifting</span>
+              <img src="images/2ec1ebc6-67af-4752-a5f0-24f26331d408.JPG" alt="Celebration Gold Basket Luxury Hamper" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+Q2VsZWJyYXRpb24gR29sZCBCYXNrZXQgTHV4dXJ5IEhhbXBlcjwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjM2NSIgZm9udC1mYW1pbHk9IidNb250c2VycmF0Jywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iI0E4ODU0RCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMuNSI+QlVCQkxFUyBOQVRVUkFMPC90ZXh0PgogIDx0ZXh0IHg9IjMwMCIgeT0iMzkwIiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iNDAwIiBmaWxsPSIjN0E3NDZCIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMS41Ij5BUlRJU0FOQUwgQk9UQU5JQ0FMPC90ZXh0Pgo8L3N2Zz4='" />
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Celebration Gold Basket Luxury Hamper</h3>
+              <div class="product-price">₹650</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Ornate gold wire basket with artisanal dessert soaps, nourishing lotion pump bottle, lip balm pot, and satin celebration bow.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Celebration Gold Basket Luxury Hamper">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(14, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-14">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(14, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-14" onclick="addProductToBag(14)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: The Royal Botanical Wellness Hamper Box -->
+        <article class="lux-card" data-category="gifting" id="card-15">
+          
+            <div class="card-media-wrapper">
+              <span class="luxury-badge">Curated Gifting</span>
+              <img src="images/3a6bfa79-8cd9-4ec4-9ff3-6cb66c4c4df8.JPG" alt="The Royal Botanical Wellness Hamper Box" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+VGhlIFJveWFsIEJvdGFuaWNhbCBXZWxsbmVzcyBIYW1wZXIgQm94PC90ZXh0PgogIDx0ZXh0IHg9IjMwMCIgeT0iMzY1IiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjQTg4NTREIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMy41Ij5CVUJCTEVTIE5BVFVSQUw8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzOTAiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI0MDAiIGZpbGw9IiM3QTc0NkIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxLjUiPkFSVElTQU5BTCBCT1RBTklDQUw8L3RleHQ+Cjwvc3ZnPg=='" />
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">The Royal Botanical Wellness Hamper Box</h3>
+              <div class="product-price">₹999</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Curated grand gift box featuring Rose Bath Salt (100g), Charcoal Face Wash, Red Clay Face Wash (200ml), Papaya Cucumber Soap, botanical wax sachet & macaron soaps.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for The Royal Botanical Wellness Hamper Box">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(15, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-15">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(15, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-15" onclick="addProductToBag(15)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card: Cute Mini Cupcake Gift Favors -->
+        <article class="lux-card" data-category="gifting" id="card-16">
+          
+            <div class="card-media-wrapper">
+              <span class="luxury-badge">Curated Gifting</span>
+              <img src="images/136a2a86-5810-4ea7-8c5e-3e90ba3e931d.JPG" alt="Cute Mini Cupcake Gift Favors" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ibHV4R3JhZCIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZBRjdGMiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNFRkU4REUiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI2x1eEdyYWQpIi8+CiAgPHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhDRUJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiByeD0iMTIiLz4KICA8cmVjdCB4PSIzNSIgeT0iMzUiIHdpZHRoPSI1MzAiIGhlaWdodD0iNTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEOENFQkYiIHN0cm9rZS13aWR0aD0iMC44IiByeD0iOCIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI0MCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFFMzUyRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNDAiIHI9IjU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBODg1NEQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAxOTUgQzI4NSAyMjAgMjgwIDIzNSAyODUgMjQ4IEMyOTAgMjYwIDMwMCAyNjUgMzAwIDI2NSBDMzAwIDI2NSAzMTAgMjYwIDMxNSAyNDggQzMyMCAyMzUgMzE1IDIyMCAzMDAgMTk1IFoiIGZpbGw9IiMxRTM1MkYiIG9wYWNpdHk9IjAuODUiLz4KICA8cGF0aCBkPSJNMjkwIDIzNSBDMjk1IDI0NSAzMDAgMjUwIDMwNSAyNDUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzM1IiBmb250LWZhbWlseT0iJ1BsYXlmYWlyIERpc3BsYXknLCBHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iIzFFMzUyRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+Q3V0ZSBNaW5pIEN1cGNha2UgR2lmdCBGYXZvcnM8L3RleHQ+CiAgPHRleHQgeD0iMzAwIiB5PSIzNjUiIGZvbnQtZmFtaWx5PSInTW9udHNlcnJhdCcsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiNBODg1NEQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIzLjUiPkJVQkJMRVMgTkFUVVJBTDwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjM5MCIgZm9udC1mYW1pbHk9IidNb250c2VycmF0Jywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzdBNzQ2QiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEuNSI+QVJUSVNBTkFMIEJPVEFOSUNBTDwvdGV4dD4KPC9zdmc+'" />
+            </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="product-title">Cute Mini Cupcake Gift Favors</h3>
+              <div class="product-price">₹180</div>
+            </div>
+            <div class="ingredients-box">
+              <span class="ingredients-label">✦ Ingredients &amp; Notes</span>
+              <p class="ingredients-text">Delightful cupcake-styled dessert soaps individually wrapped in decorative gift cellophane with floral ribbons.</p>
+            </div>
+
+            <!-- Quantity Selector & Add to Bag Action -->
+            <div class="card-cart-controls">
+              <div class="qty-control-block" aria-label="Quantity selector for Cute Mini Cupcake Gift Favors">
+                <button type="button" class="qty-btn" onclick="adjustCardQty(16, -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-display" id="card-qty-16">1</span>
+                <button type="button" class="qty-btn" onclick="adjustCardQty(16, 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn-add-to-bag" id="add-btn-16" onclick="addProductToBag(16)">
+                <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="btn-text">Add to Bag</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      <!-- Empty State Container -->
+      <div id="emptyCategoryState" class="empty-category-container" style="display: none;">
+        <div class="empty-icon">✦</div>
+        <h3 class="empty-title">No Creations Currently in this Category</h3>
+        <p class="empty-desc">
+          Every creation at Bubbles Natural is produced in small, limited artisanal batches.
+          Custom orders, bespoke hampers, and ingredient requests are warmly welcomed directly on WhatsApp!
+        </p>
+        <button type="button" onclick="openCustomWhatsApp()" class="btn-add-to-bag" style="display: inline-flex; width: auto; padding: 12px 28px; margin: 0 auto;">
+          Inquire on WhatsApp
+        </button>
+      </div>
+    </section>
+
+    <!-- Bespoke Gifting Banner -->
+    <section class="bespoke-gifting-banner">
+      <div class="gifting-inner">
+        <div class="gifting-content">
+          <span class="gifting-tag">✦ Custom Gifting &amp; Celebrations</span>
+          <h2 class="gifting-title">Curated Gift Hampers &amp; Bespoke Favors</h2>
+          <p class="gifting-desc">
+            Planning wedding favors, baby announcements, festive hampers, or corporate wellness gifts? We craft personalized botanical sets featuring custom aroma profiles, handcrafted soaps, nourishing balms, and luxury packaging tailored to your celebrations.
+          </p>
+        </div>
+        <div>
+          <a href="https://wa.me/918240698338?text=Hi!%20I%20would%20like%20to%20inquire%20about%20Custom%20Gifting%20%26%20Bespoke%20Hampers" target="_blank" rel="noopener noreferrer" class="btn-gold">
+            <svg class="wa-invoice-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.45 1.082 1.343 1.879.893.797 1.64 1.045 1.871 1.16.231.116.368.101.505-.058.138-.159.588-.686.746-.921.159-.235.318-.196.534-.116.217.08 1.372.646 1.608.762.236.116.393.173.45.27.058.097.058.56-.086.965z"/>
+            </svg>
+            <span>Inquire for Custom Gifting</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Transparency Layer: 3-Step Ribbon (Add to Bag → Review Order → Confirm via WhatsApp) -->
+    <section class="how-to-order-section">
+      <span class="section-eyebrow">Seamless &amp; Direct</span>
+      <h2 class="section-headline">How to Order</h2>
+      <p class="section-desc">
+        Enjoy a refined, personalized purchasing experience directly connecting you with our atelier.
+      </p>
+
+      <div class="order-ribbon-grid">
+        <!-- Step 1 -->
+        <div class="ribbon-step-card">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Add to Bag</h3>
+          <p class="step-desc">
+            Choose your desired quantity on any product card and click 'Add to Bag'.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="ribbon-step-card">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Review Order</h3>
+          <p class="step-desc">
+            Open your Shopping Bag to verify quantities, subtotal amounts, and estimated total.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="ribbon-step-card">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Confirm via WhatsApp</h3>
+          <p class="step-desc">
+            Click 'Confirm Order via WhatsApp' to send your structured invoice directly to our concierge.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Complete Contact Grid Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Summary -->
+        <div>
+          <div class="footer-brand-title">Bubbles Natural</div>
+          <p class="footer-tagline">Pure Botanicals • Conscious Luxury</p>
+          <p class="footer-bio">
+            Rooted in mindful formulation, we curate luxury-tier organic soaps, natural lip balms, nourishing magnesium lotions, and fine perfumes. Crafted in small batches to preserve botanical efficacy.
+          </p>
+        </div>
+
+        <!-- Direct Contact Channels -->
+        <div>
+          <h3 class="footer-heading">Direct Concierge</h3>
+          
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <div>
+              <a href="mailto:urvashi.mehta90@gmail.com" class="contact-link">urvashi.mehta90@gmail.com</a>
+              <span class="contact-sub">Official Business Email ID</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.45 1.082 1.343 1.879.893.797 1.64 1.045 1.871 1.16.231.116.368.101.505-.058.138-.159.588-.686.746-.921.159-.235.318-.196.534-.116.217.08 1.372.646 1.608.762.236.116.393.173.45.27.058.097.058.56-.086.965z"/>
+            </svg>
+            <div>
+              <a href="https://wa.me/918240698338" target="_blank" rel="noopener noreferrer" class="contact-link">+91 82406 98338</a>
+              <span class="contact-sub">WhatsApp Support &amp; Concierge</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Studio & Dispatch Details -->
+        <div>
+          <h3 class="footer-heading">Studio &amp; Dispatch</h3>
+          <div class="location-box">
+            <p>100% Handcrafted in small batches.</p>
+            <p>Carefully dispatched pan-India with eco-conscious protective packaging.</p>
+            <div class="location-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Bengaluru, Karnataka, India</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Line -->
+      <div class="footer-bottom-bar">
+        <div class="copyright-line">
+          &copy; 2026 Bubbles Natural. All rights reserved. Handcrafted with care in Bengaluru, India.
+        </div>
+        <div class="footer-guarantee">
+          <span>✦ 100% Handcrafted</span>
+          <span>•</span>
+          <span>Small-Batch Local Production</span>
+          <span>•</span>
+          <span>Cruelty-Free</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PERSISTENT FLOATING SHOPPING BAG
+       ========================================================================== -->
+  <button type="button" class="floating-bag-btn" id="floatingBagBtn" onclick="toggleCartDrawer(true)" aria-label="Open Shopping Bag">
+    <svg class="floating-bag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <path d="M16 10a4 4 0 0 1-8 0"/>
+    </svg>
+    <span class="bag-label">Shopping Bag</span>
+    <span class="bag-badge" id="bagBadge">0</span>
+  </button>
+
+  <!-- ==========================================================================
+       MINIMALIST SLIDE-OUT CART OVERLAY
+       ========================================================================== -->
+  <div class="cart-backdrop" id="cartBackdrop" onclick="toggleCartDrawer(false)"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Your Shopping Bag</h3>
+      <button type="button" class="cart-close-btn" onclick="toggleCartDrawer(false)" aria-label="Close Shopping Bag">&times;</button>
+    </div>
+
+    <div class="cart-items-container" id="cartItemsContainer">
+      <!-- Items dynamically injected via JavaScript -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span class="cart-total-label">Estimated Total:</span>
+        <span class="cart-total-amount" id="cartTotalDisplay">₹0</span>
+      </div>
+      <p class="cart-shipping-note">
+        ✦ Orders are confirmed directly with our atelier on WhatsApp. Shipping address &amp; UPI details finalized upon dispatch confirmation.
+      </p>
+      <button type="button" class="btn-confirm-whatsapp" id="btnConfirmWhatsApp" onclick="confirmOrderWhatsApp()">
+        <svg class="wa-invoice-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.45 1.082 1.343 1.879.893.797 1.64 1.045 1.871 1.16.231.116.368.101.505-.058.138-.159.588-.686.746-.921.159-.235.318-.196.534-.116.217.08 1.372.646 1.608.762.236.116.393.173.45.27.058.097.058.56-.086.965z"/>
+        </svg>
+        <span>Confirm Order via WhatsApp</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       VANILLA JAVASCRIPT: SHOPPING CART & INVOICE-STYLE WHATSAPP LOGIC
+       ========================================================================== -->
+  <script>
+    // Product catalog data
+    const CATALOG = [{"id": 0, "name": "Chocolate Soap", "price": "₹120", "priceNum": 120, "image": "images/bubblesnaturals_chocolate_soap.jpg", "category": "soaps"}, {"id": 1, "name": "Body Lotion", "price": "₹220", "priceNum": 220, "image": "images/bübblesnatural_Magnesium_Lotion.png", "category": "lotions"}, {"id": 2, "name": "Macaron Botanical Lip Balm", "price": "₹150", "priceNum": 150, "image": "images/bubblesnatural_lipbalm.png", "category": "lip-care"}, {"id": 3, "name": "Floral Perfume - EDP", "price": "₹200", "priceNum": 200, "image": "images/bubblesnatural_edp.png", "category": "perfumes"}, {"id": 4, "name": "Botanical Floral Wax Sachet", "price": "₹180", "priceNum": 180, "image": "images/0c6edd97-8f2e-428f-8dec-bdeba628e63a.JPG", "category": "perfumes"}, {"id": 5, "name": "Pink Donut & Shimmer Heart Soap Duo", "price": "₹160", "priceNum": 160, "image": "images/Soap.JPG", "category": "soaps"}, {"id": 6, "name": "Watermelon Slice Handcrafted Soap", "price": "₹150", "priceNum": 150, "image": "images/cbf58346-7b5f-4f63-8796-1102d946eb53.JPG", "category": "soaps"}, {"id": 7, "name": "Golden Marigold Floral Sculpted Soap", "price": "₹150", "priceNum": 150, "image": "images/d1ec642b-1aca-417c-a804-85a396b88c02.JPG", "category": "soaps"}, {"id": 8, "name": "Citrus Sunshine Layered Soap Bar", "price": "₹140", "priceNum": 140, "image": "images/20ee6f21-cf42-4da6-a742-0c967f051527.JPG", "category": "soaps"}, {"id": 9, "name": "Mosaic Terrazzo Soap Bar", "price": "₹140", "priceNum": 140, "image": "images/babfa4dc-24e3-45e2-9a8d-da225c424db1.JPG", "category": "soaps"}, {"id": 10, "name": "Golden Heart Coffee Scrub Soap", "price": "₹150", "priceNum": 150, "image": "images/ca6363f5-271c-45e6-8600-50ff1916ba43.JPG", "category": "soaps"}, {"id": 11, "name": "Baby Feet Favor Soaps (Set of 2)", "price": "₹160", "priceNum": 160, "image": "images/30d5c45a-92bc-498e-90cf-133bb9807d61.JPG", "category": "soaps"}, {"id": 12, "name": "Sparkle Tractor Novelty Soap", "price": "₹150", "priceNum": 150, "image": "images/bec0a578-5c2c-44fc-a9a1-580699317beb.JPG", "category": "soaps"}, {"id": 13, "name": "Personalized Name Letter Soap Set", "price": "₹350", "priceNum": 350, "image": "images/ef81cc45-e79c-47a4-bde4-b61629edf6ce.JPG", "category": "gifting"}, {"id": 14, "name": "Celebration Gold Basket Luxury Hamper", "price": "₹650", "priceNum": 650, "image": "images/2ec1ebc6-67af-4752-a5f0-24f26331d408.JPG", "category": "gifting"}, {"id": 15, "name": "The Royal Botanical Wellness Hamper Box", "price": "₹999", "priceNum": 999, "image": "images/3a6bfa79-8cd9-4ec4-9ff3-6cb66c4c4df8.JPG", "category": "gifting"}, {"id": 16, "name": "Cute Mini Cupcake Gift Favors", "price": "₹180", "priceNum": 180, "image": "images/136a2a86-5810-4ea7-8c5e-3e90ba3e931d.JPG", "category": "gifting"}];
+    const PHONE_NUMBER = "918240698338";
+
+    // Shopping Bag State: { productId: quantity }
+    let cart = {};
+
+    // Card Quantity Selectors State: { productId: currentVal }
+    let cardQuantities = {};
+
+    // -------------------------------------------------------------------------
+    // CARD QUANTITY SELECTOR
+    // -------------------------------------------------------------------------
+    function adjustCardQty(productId, delta) {
+      const current = cardQuantities[productId] || 1;
+      const updated = Math.max(1, current + delta);
+      cardQuantities[productId] = updated;
+
+      const display = document.getElementById('card-qty-' + productId);
+      if (display) {
+        display.textContent = updated;
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // ADD PRODUCT TO BAG
+    // -------------------------------------------------------------------------
+    function addProductToBag(productId) {
+      const qtyToAdd = cardQuantities[productId] || 1;
+      cart[productId] = (cart[productId] || 0) + qtyToAdd;
+
+      // Reset card counter back to 1
+      cardQuantities[productId] = 1;
+      const display = document.getElementById('card-qty-' + productId);
+      if (display) display.textContent = 1;
+
+      // Visual feedback on button
+      const btn = document.getElementById('add-btn-' + productId);
+      if (btn) {
+        btn.classList.add('added-flash');
+        const textSpan = btn.querySelector('.btn-text');
+        const originalText = textSpan.textContent;
+        textSpan.textContent = '✓ Added to Bag';
+        setTimeout(function() {
+          textSpan.textContent = originalText;
+          btn.classList.remove('added-flash');
+        }, 900);
+      }
+
+      // Update Cart & Animate Floating Badge
+      updateCartUI();
+      animateBadge();
+    }
+
+    function animateBadge() {
+      const badge = document.getElementById('bagBadge');
+      if (badge) {
+        badge.classList.add('pop');
+        setTimeout(function() {
+          badge.classList.remove('pop');
+        }, 250);
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // CART QUANTITY MODIFIERS INSIDE DRAWER
+    // -------------------------------------------------------------------------
+    function modifyCartItemQty(productId, delta) {
+      if (!cart[productId]) return;
+      const newQty = cart[productId] + delta;
+      if (newQty <= 0) {
+        delete cart[productId];
+      } else {
+        cart[productId] = newQty;
+      }
+      updateCartUI();
+    }
+
+    function removeCartItem(productId) {
+      delete cart[productId];
+      updateCartUI();
+    }
+
+    // -------------------------------------------------------------------------
+    // UPDATE CART UI & DYNAMICALLY CALCULATE TOTAL
+    // -------------------------------------------------------------------------
+    function updateCartUI() {
+      const container = document.getElementById('cartItemsContainer');
+      const badge = document.getElementById('bagBadge');
+      const totalDisplay = document.getElementById('cartTotalDisplay');
+      const confirmBtn = document.getElementById('btnConfirmWhatsApp');
+
+      const productIds = Object.keys(cart);
+      let totalItems = 0;
+      let grandTotal = 0;
+
+      if (productIds.length === 0) {
+        container.innerHTML = `
+          <div class="empty-cart-notice">
+            <div class="empty-cart-icon">✦</div>
+            <h4>Your Shopping Bag is Empty</h4>
+            <p>Explore our handcrafted botanical creations above to curate your bag.</p>
+          </div>
+        `;
+        badge.textContent = '0';
+        totalDisplay.textContent = '₹0';
+        confirmBtn.disabled = true;
+        return;
+      }
+
+      let itemsHtml = '';
+      productIds.forEach(function(pid) {
+        const id = parseInt(pid, 10);
+        const item = CATALOG.find(function(c) { return c.id === id; });
+        if (!item) return;
+
+        const qty = cart[id];
+        totalItems += qty;
+        const subtotal = item.priceNum * qty;
+        grandTotal += subtotal;
+
+        itemsHtml += `
+          <div class="cart-item-row" id="cart-item-${id}">
+            <img src="${item.image}" alt="${item.name}" class="cart-item-thumb" />
+            <div class="cart-item-info">
+              <div class="cart-item-name">${item.name}</div>
+              <div class="cart-item-unit-price">${item.price} each</div>
+              <div class="cart-item-controls">
+                <button type="button" class="cart-qty-btn" onclick="modifyCartItemQty(${id}, -1)" aria-label="Decrease quantity">−</button>
+                <span class="cart-qty-num">${qty}</span>
+                <button type="button" class="cart-qty-btn" onclick="modifyCartItemQty(${id}, 1)" aria-label="Increase quantity">+</button>
+                <button type="button" class="cart-item-remove-btn" onclick="removeCartItem(${id})" aria-label="Remove item" title="Remove">&times;</button>
+              </div>
+            </div>
+            <div class="cart-item-subtotal">₹${subtotal}</div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = itemsHtml;
+      badge.textContent = totalItems.toString();
+      totalDisplay.textContent = '₹' + grandTotal;
+      confirmBtn.disabled = false;
+    }
+
+    // -------------------------------------------------------------------------
+    // DRAWER TOGGLE
+    // -------------------------------------------------------------------------
+    function toggleCartDrawer(isOpen) {
+      const backdrop = document.getElementById('cartBackdrop');
+      const drawer = document.getElementById('cartDrawer');
+      if (isOpen) {
+        backdrop.classList.add('open');
+        drawer.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      } else {
+        backdrop.classList.remove('open');
+        drawer.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Close drawer on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        toggleCartDrawer(false);
+      }
+    });
+
+    // -------------------------------------------------------------------------
+    // INVOICE-STYLE WHATSAPP MESSAGE FORMATTING
+    // -------------------------------------------------------------------------
+    function confirmOrderWhatsApp() {
+      const productIds = Object.keys(cart);
+      if (productIds.length === 0) return;
+
+      let itemsFormatted = '';
+      let totalAmount = 0;
+
+      productIds.forEach(function(pid) {
+        const id = parseInt(pid, 10);
+        const item = CATALOG.find(function(c) { return c.id === id; });
+        if (!item) return;
+
+        const qty = cart[id];
+        const subtotal = item.priceNum * qty;
+        totalAmount += subtotal;
+
+        itemsFormatted += `• ${qty} x ${item.name} (₹${subtotal})\n`;
+      });
+
+      // Exact Invoice Format per prompt specifications
+      const invoiceText = 
+`Hi! I would like to place an order:
+----------------------------------
+${itemsFormatted.trim()}
+----------------------------------
+Total Amount: ₹${totalAmount}
+
+Shipping Details:
+Name: 
+Address: `;
+
+      const waUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(invoiceText)}`;
+      window.open(waUrl, '_blank');
+    }
+
+    function openCustomWhatsApp() {
+      const text = "Hi! I would like to inquire about custom orders and bespoke hampers.";
+      const waUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(text)}`;
+      window.open(waUrl, '_blank');
+    }
+
+    // -------------------------------------------------------------------------
+    // CATEGORY FILTER CAPSULE LOGIC
+    // -------------------------------------------------------------------------
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCartUI();
+
+      const pills = document.querySelectorAll('.cat-pill');
+      const cards = document.querySelectorAll('.lux-card');
+      const emptyState = document.getElementById('emptyCategoryState');
+
+      pills.forEach(function(pill) {
+        pill.addEventListener('click', function() {
+          pills.forEach(function(p) { p.classList.remove('active'); });
+          this.classList.add('active');
+
+          const filter = this.getAttribute('data-filter');
+          let visibleCount = 0;
+
+          cards.forEach(function(card) {
+            const cardCat = card.getAttribute('data-category');
+            if (filter === 'all' || cardCat === filter) {
+              card.style.display = 'flex';
+              visibleCount++;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+
+          if (visibleCount === 0) {
+            emptyState.style.display = 'block';
+          } else {
+            emptyState.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // -------------------------------------------------------------------------
+    // MULTI-PHOTO GALLERY SLIDER LOGIC
+    // -------------------------------------------------------------------------
+    function slideGallery(galleryId, direction) {
+      const gallery = document.getElementById(galleryId);
+      if (!gallery) return;
+      const track = gallery.querySelector('.gallery-track');
+      if (!track) return;
+      const slideWidth = track.clientWidth;
+      track.scrollBy({ left: direction * slideWidth, behavior: 'smooth' });
+    }
+
+    function goToSlide(galleryId, slideIndex) {
+      const gallery = document.getElementById(galleryId);
+      if (!gallery) return;
+      const track = gallery.querySelector('.gallery-track');
+      if (!track) return;
+      const slideWidth = track.clientWidth;
+      track.scrollTo({ left: slideIndex * slideWidth, behavior: 'smooth' });
+    }
+
+    function updateSliderDots(galleryId) {
+      const gallery = document.getElementById(galleryId);
+      if (!gallery) return;
+      const track = gallery.querySelector('.gallery-track');
+      const dots = gallery.querySelectorAll('.slider-dot');
+      if (!track || !dots.length) return;
+
+      const slideWidth = track.clientWidth;
+      const scrollPos = track.scrollLeft;
+      const activeIdx = Math.round(scrollPos / slideWidth);
+
+      dots.forEach(function(dot, idx) {
+        if (idx === activeIdx) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
