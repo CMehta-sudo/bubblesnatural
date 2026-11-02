@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Chocolate Soap",
+    "category": "soaps",
+    "price": "₹120",
+    "ingredients": "Raw cocoa butter, dark chocolate essence, nourishing coconut oil, and plant glycerin.",
+    "image_path": "bubblesnaturals_chocolate_soap.jpg",
+    "images": [
+      "bubblesnaturals_chocolate_soap.jpg"
+    ]
+  },
+  {
+    "name": "Body Lotion",
+    "category": "lotions",
+    "price": "₹220",
+    "ingredients": "Magnesium lotion with shea butter and botanical oils for calm skin and deeper relaxation.",
+    "image_path": "bübblesnatural_Magnesium_Lotion.png",
+    "images": [
+      "bübblesnatural_Magnesium_Lotion.png"
+    ]
+  },
+  {
+    "name": "Macaron Botanical Lip Balm",
+    "category": "lip-care",
+    "price": "₹150",
+    "ingredients": "Cold-pressed sweet almond oil, beeswax, organic butter, and natural Strawberry & Orange infusions.",
+    "image_path": "bubblesnatural_lipbalm.png",
+    "images": [
+      "bubblesnatural_lipbalm.png",
+      "f06a1533-b6fd-4a8a-92ed-48a1c15b2fb9.JPG",
+      "ed935565-cb1a-4f2f-b322-7c87bb8ca29e.JPG"
+    ]
+  },
+  {
+    "name": "Floral Perfume - EDP",
+    "category": "perfumes",
+    "price": "₹200",
+    "ingredients": "Small-batch artisanal Eau De Parfum (10ml) infused with fresh blooming floral bouquets and subtle sweet cherry undertones.",
+    "image_path": "bubblesnatural_edp.png",
+    "images": [
+      "bubblesnatural_edp.png",
+      "c8f5c3f7-492c-4483-a03a-d40092557d7f.JPG"
+    ]
+  },
+  {
+    "name": "Botanical Floral Wax Sachet",
+    "category": "perfumes",
+    "price": "₹180",
+    "ingredients": "Pure soy & beeswax tablet infused with aromatic essential oils, dried calendula & baby's breath, with jute hanging cord for wardrobes.",
+    "image_path": "0c6edd97-8f2e-428f-8dec-bdeba628e63a.JPG",
+    "images": [
+      "0c6edd97-8f2e-428f-8dec-bdeba628e63a.JPG",
+      "b9fdcf90-5fcb-442a-9cfe-4bfbf0840b91.JPG"
+    ]
+  },
+  {
+    "name": "Pink Donut & Shimmer Heart Soap Duo",
+    "category": "soaps",
+    "price": "₹160",
+    "ingredients": "Artisan glazed pastry soap with gentle exfoliating sprinkles paired with a shimmering midnight blue heart bar.",
+    "image_path": "Soap.JPG",
+    "images": [
+      "Soap.JPG",
+      "55c0522c-6fba-4b9c-b930-67d3f807c18a.JPG"
+    ]
+  },
+  {
+    "name": "Watermelon Slice Handcrafted Soap",
+    "category": "soaps",
+    "price": "₹150",
+    "ingredients": "Cold-process artisan soap slice with botanical watermelon scent, poppy seed scrub, and moisturizing aloe vera.",
+    "image_path": "cbf58346-7b5f-4f63-8796-1102d946eb53.JPG",
+    "images": [
+      "cbf58346-7b5f-4f63-8796-1102d946eb53.JPG"
+    ]
+  },
+  {
+    "name": "Golden Marigold Floral Sculpted Soap",
+    "category": "soaps",
+    "price": "₹150",
+    "ingredients": "Intricately hand-poured botanical marigold bloom soap enriched with golden calendula extract and honey.",
+    "image_path": "d1ec642b-1aca-417c-a804-85a396b88c02.JPG",
+    "images": [
+      "d1ec642b-1aca-417c-a804-85a396b88c02.JPG"
+    ]
+  },
+  {
+    "name": "Citrus Sunshine Layered Soap Bar",
+    "category": "soaps",
+    "price": "₹140",
+    "ingredients": "Dual-tone cold process bar infused with sweet orange, turmeric root, mango butter, and pure coconut oil.",
+    "image_path": "20ee6f21-cf42-4da6-a742-0c967f051527.JPG",
+    "images": [
+      "20ee6f21-cf42-4da6-a742-0c967f051527.JPG"
+    ]
+  },
+  {
+    "name": "Mosaic Terrazzo Soap Bar",
+    "category": "soaps",
+    "price": "₹140",
+    "ingredients": "Clear vegetable glycerin block studded with colorful artisan soap cubes for a modern terrazzo finish.",
+    "image_path": "babfa4dc-24e3-45e2-9a8d-da225c424db1.JPG",
+    "images": [
+      "babfa4dc-24e3-45e2-9a8d-da225c424db1.JPG"
+    ]
+  },
+  {
+    "name": "Golden Heart Coffee Scrub Soap",
+    "category": "soaps",
+    "price": "₹150",
+    "ingredients": "Fine Arabica coffee grounds for gentle circulation and exfoliation, centered with shimmering gold mica heart.",
+    "image_path": "ca6363f5-271c-45e6-8600-50ff1916ba43.JPG",
+    "images": [
+      "ca6363f5-271c-45e6-8600-50ff1916ba43.JPG"
+    ]
+  },
+  {
+    "name": "Baby Feet Favor Soaps (Set of 2)",
+    "category": "soaps",
+    "price": "₹160",
+    "ingredients": "Mild hypoallergenic glycerin soaps in aqua and royal blue, designed for baby showers, nursery gifts, and favors.",
+    "image_path": "30d5c45a-92bc-498e-90cf-133bb9807d61.JPG",
+    "images": [
+      "30d5c45a-92bc-498e-90cf-133bb9807d61.JPG"
+    ]
+  },
+  {
+    "name": "Sparkle Tractor Novelty Soap",
+    "category": "soaps",
+    "price": "₹150",
+    "ingredients": "Playful translucent tractor soap loaded with cosmetic glitter and fruity fragrance, gentle on sensitive skin.",
+    "image_path": "bec0a578-5c2c-44fc-a9a1-580699317beb.JPG",
+    "images": [
+      "bec0a578-5c2c-44fc-a9a1-580699317beb.JPG"
+    ]
+  },
+  {
+    "name": "Personalized Name Letter Soap Set",
+    "category": "gifting",
+    "price": "₹350",
+    "ingredients": "Customized alphabet soap bars handcrafted to spell any recipient's name in pastel tones with satin bow packaging.",
+    "image_path": "ef81cc45-e79c-47a4-bde4-b61629edf6ce.JPG",
+    "images": [
+      "ef81cc45-e79c-47a4-bde4-b61629edf6ce.JPG"
+    ]
+  },
+  {
+    "name": "Celebration Gold Basket Luxury Hamper",
+    "category": "gifting",
+    "price": "₹650",
+    "ingredients": "Ornate gold wire basket with artisanal dessert soaps, nourishing lotion pump bottle, lip balm pot, and satin celebration bow.",
+    "image_path": "2ec1ebc6-67af-4752-a5f0-24f26331d408.JPG",
+    "images": [
+      "2ec1ebc6-67af-4752-a5f0-24f26331d408.JPG"
+    ]
+  },
+  {
+    "name": "The Royal Botanical Wellness Hamper Box",
+    "category": "gifting",
+    "price": "₹999",
+    "ingredients": "Curated grand gift box featuring Rose Bath Salt (100g), Charcoal Face Wash, Red Clay Face Wash (200ml), Papaya Cucumber Soap, botanical wax sachet & macaron soaps.",
+    "image_path": "3a6bfa79-8cd9-4ec4-9ff3-6cb66c4c4df8.JPG",
+    "images": [
+      "3a6bfa79-8cd9-4ec4-9ff3-6cb66c4c4df8.JPG"
+    ]
+  },
+  {
+    "name": "Cute Mini Cupcake Gift Favors",
+    "category": "gifting",
+    "price": "₹180",
+    "ingredients": "Delightful cupcake-styled dessert soaps individually wrapped in decorative gift cellophane with floral ribbons.",
+    "image_path": "136a2a86-5810-4ea7-8c5e-3e90ba3e931d.JPG",
+    "images": [
+      "136a2a86-5810-4ea7-8c5e-3e90ba3e931d.JPG"
+    ]
+  }
+]
